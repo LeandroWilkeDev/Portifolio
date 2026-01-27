@@ -1,0 +1,120 @@
+/* Text shadow para títulos das seções */
+.section-title-shadow {
+  text-shadow: 0 2px 12px rgba(56, 189, 248, 0.35), 0 1px 2px rgba(0,0,0,0.18);
+}
+/* Fade-in suave para o footer */
+.footer-fade-in {
+  opacity: 0;
+  animation: footerFadeIn 1.2s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+@keyframes footerFadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Underline animado para botões do header */
+.nav-underline {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.nav-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #22d3ee 0%, #3b82f6 100%);
+  transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+  border-radius: 2px;
+}
+.nav-underline:hover::after, .nav-underline:focus::after {
+  width: 100%;
+}
+@import "tailwindcss";
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #eaf6fb;
+  background-color: #181c24;
+
+  --color-react-blue: #61dafb;
+  --color-react-dark: #20232a;
+  --color-react-cyan: #21a1f3;
+  --color-react-purple: #82a3ea;
+  --color-react-bg: #181c24;
+  --color-react-bg-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  --color-react-border: #61dafb33;
+  --color-react-card: #22304a;
+  --color-react-text: #eaf6fb;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+a:hover {
+  color: #5dc3fa;
+}
+
+body {
+  @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+#cardProject {
+  
+}
+#cardProject:hover {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(1, 145, 255, 0.618);
+}
