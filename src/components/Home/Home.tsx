@@ -85,7 +85,7 @@ function SequencedTypewriter() {
       )}
       {/* Terceira linha: profissão */}
       {step >= 2 && (
-        <span className="block lg:text-2xl md:text-xl sm:text-xs text-lg font-medium text-gray-400 mt-2 mb-6">
+        <span className="block lg:text-2xl md:text-xl sm:text-xs text-lg font-medium text-gray-400 mt-2 mb-3">
           <Typewriter
             words={[text3]}
             loop={1}
