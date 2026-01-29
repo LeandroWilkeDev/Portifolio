@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <section id="home" className="flex flex-col items-center justify-center text-center min-h-screen px-2 sm:px-0" data-aos-duration="1000" data-aos="zoom-in">
       {/* Avatar do usuário */}
-      <div className="relative mb-4 mt-15 w-full max-w-xs sm:max-w-full flex justify-center items-center">
+      <div className="relative mb-4 mt-10 w-full max-w-xs sm:max-w-full flex justify-center items-center">
         <Avatar />
       </div>
       {/* Animação de texto sequencial */}
